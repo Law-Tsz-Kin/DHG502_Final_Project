@@ -28,8 +28,10 @@ Phase assignment criterion (documented for the audit):
   P3_assassination      – the embassy in Qin and the assassination attempt itself.
   P4_fall_of_yan        – Qin's retaliation and conquest of Yan, death of 太子丹,
                           fall of Yan/Dai/Qi, unification and aftermath.
-  Segments whose content substantially straddles two or more phases are marked
-  [VERIFY_PHASE] instead of guessing.
+  Segments whose content substantially straddles two or more phases were
+  originally marked [VERIFY_PHASE]; the user has since resolved them manually
+  (S001 → P2, S014 → P3, S058 → P3), and the PHASES table below reflects those
+  decisions so re-running the script reproduces the committed CSV exactly.
 """
 
 import csv
@@ -63,18 +65,18 @@ VERIFY = "[VERIFY_PHASE]"
 # One phase per blank-line-delimited block, in file order.
 PHASES = {
     # 燕太子丹質於秦亡歸 (ZGC 燕策三): 12 blocks
-    # [0] 丹歸國、患秦、問鞫武（尚未有謀）→ P1
+    # [0] 丹歸國、患秦、問鞫武（尚未有謀）→ P2（人工修訂：歸國即謀劃背景，歸入 P2）
     # [1]-[8] 樊於期奔燕、合縱之議、田光薦軻、荊軻許諾、備行、易水送別 → P2
     # [9]-[10] 使秦、圖窮匕見 → P3   [11] 秦伐燕、滅燕 → P4
     "燕太子丹質於秦亡歸_燕策三_戰國策.txt":
-        [P1] + [P2] * 8 + [P3] * 2 + [P4],
+        [P2] + [P2] * 8 + [P3] * 2 + [P4],
 
     # 燕召公世家 25-33年 (Shiji): 3 blocks
     # [0] 秦滅韓、滅趙，代王嘉自立（威脅背景）→ P1
-    # [1] 同段橫跨養士謀刺／刺秦王／拔薊遷遼東斬丹 → 橫跨 P2/P3/P4 → VERIFY
+    # [1] 同段橫跨養士謀刺／刺秦王／拔薊遼東斬丹 → P3（人工修訂：以刺秦王為主軸）
     # [2] 三十三年秦拔遼東虜燕王喜，卒滅燕 → P4
     "燕王喜二十五年至三十三年_燕召公世家_史記.txt":
-        [P1, VERIFY, P4],
+        [P1, P3, P4],
 
     # 燕王喜使栗腹… (ZGC 燕策三): 4 blocks — 燕趙戰後交涉與謝罪書，皆在謀劃之前 → P1
     "燕王喜使栗腹以百金為趙孝成王壽_燕策三_戰國策.txt":
@@ -99,10 +101,10 @@ PHASES = {
 
     # 秦始皇本紀 (Shiji): 6 blocks
     # [0] 十八、十九年攻趙、屯中山欲攻燕 → P1
-    # [1] 同段橫跨使荊軻刺秦王（P3）與破燕取薊、得太子丹首（P4）→ 橫跨 → VERIFY
+    # [1] 同段橫跨使荊軻刺秦王（P3）與破燕取薊、得太子丹首（P4）→ P3（人工修訂：以刺秦王為主軸）
     # [2]-[5] 滅魏、擊荊、虜燕王喜、得齊王建 → P4
     "秦始皇十八年至二十六年_秦始皇本紀_史記.txt":
-        [P1, VERIFY] + [P4] * 4,
+        [P1, P3] + [P4] * 4,
 
     # 秦并趙，北向迎燕 (ZGC 燕策三): 2 blocks — 燕使賀秦王、說秦救燕之外交 → P2
     "秦并趙北向迎燕_燕策三_戰國策.txt":
