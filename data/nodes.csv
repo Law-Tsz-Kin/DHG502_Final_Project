@@ -28,16 +28,16 @@ Wang_Ben,王賁,Wang Ben,person,Qin,"Qin general campaigning against Wei, Yan (L
 Meng_Jia,蒙嘉,Meng Jia,person,Qin,Qin courtier/zhongshuzi bribed by Jing Ke
 Xia_Wuqu,夏無且,Xia Wuqu,person,Qin,Qin court physician who struck Jing Ke with medicine bag
 Xin_Sheng,辛勝,Xin Sheng,person,Qin,Qin general attacking Yan alongside Wang Jian in Shiji 06
-Meng_Wu,蒙武,Meng Wu,person,Qin,"Qin general campaigning against Chu in Shiji 06, Shiji 73, and ZZTJ"
-Meng_Tian,蒙恬,Meng Tian,person,Qin,Qin general campaigning against Chu with Li Xin in Shiji 73 and ZZTJ
+Meng_Wu,蒙武,Meng Wu,person,Qin,Qin general campaigning against Chu in Shiji 06/73 and ZZTJ; ZZTJ writes 蒙〔武〕(恬) with collation brackets.
+Meng_Tian,蒙恬,Meng Tian,person,Qin,Qin general campaigning against Chu with Li Xin in Shiji 73; ZZTJ collation brackets (蒙〔武〕(恬)) read base text as Meng Wu.
 Lu_Buwei,文信侯,Marquis Wenxin (Lu Buwei),person,Qin,Qin minister in Shiji 43 dialogue regarding Lord Chunping
-Wang_Wan,王綰,Wang Wan,person,Qin,Qin chancellor proposing enfeoffment in ZZTJ (221 BCE)
+Wang_Wan,王綰,Wang Wan,person,Qin,Qin chancellor proposing enfeoffment in ZZTJ (221 BCE); name appears as 丞相〔王〕綰〔等〕 under collation brackets.
 Li_Si,李斯,Li Si,person,Qin,Qin commandant of justice (Tingwei) in ZZTJ (221 BCE)
 Duanhe,端和,Duanhe,person,Qin,Qin commander in Shiji 06 (attacking Zhao/Handan)
 Qiang_Hui,羌瘣,Qiang Hui,person,Qin,Qin commander in Shiji 06 (attacking Zhao)
 King_Xiaocheng_of_Zhao,趙孝成王,King Xiaocheng of Zhao,person,Zhao,King of Zhao in early segments
 King_Daoxiang_of_Zhao,趙悼襄王,King Daoxiang of Zhao,person,Zhao,King of Zhao in Shiji 34 and Shiji 43
-King_Qian_of_Zhao,趙王遷,King Qian of Zhao,person,Zhao,King of Zhao captured by Qin in Shiji 34 and ZZTJ
+King_Qian_of_Zhao,趙王遷,King Qian of Zhao,person,Zhao,King of Zhao (r. 236-228 BCE); captured at Handan. Resolved from bare 趙王 in S005/S050/S062 per reign context.
 Dai_King_Jia,代王嘉,King Jia of Dai (Prince Jia of Zhao),person,Dai,Appears as 趙公子嘉 in Shiji 34/06/ZZTJ and 代王嘉 in ZGC/Shiji 86/Shiji 34/ZZTJ
 Lian_Po,廉頗,Lian Po,person,Zhao,"Zhao general/minister (also 信平君) in ZGC, Shiji 34, and Shiji 43"
 Yue_Cheng,樂乘,Yue Cheng,person,Zhao,"Zhao general (also 武襄君) in ZGC, Shiji 34, and Shiji 43"
@@ -52,8 +52,8 @@ Lord_Pingyuan,平原君,Lord Pingyuan,person,Zhao,Zhao lord noted in Shiji 43
 King_An_of_Han,韓王安,King An of Han,person,Han,Ruler of Han captured by Qin in Shiji 34
 King_Jia_of_Wei,魏王假,King Jia of Wei,person,Wei,Ruler of Wei in ZZTJ (225 BCE)
 King_Jingmin_of_Wei,魏景湣王,King Jingmin of Wei,person,Wei,King of Wei in ZZTJ (228 BCE)
-Lord_Anling,安陵君,Lord of Anling,person,Wei,Ruler of Anling refusing land exchange in ZZTJ
-King_Fuchu_of_Chu,楚王負芻,King Fuchu of Chu,person,Chu,Ruler of Chu/Jing in Shiji 73 and ZZTJ
+Lord_Anling,安陵君,Lord of Anling,person,Wei,Ruler of Anling refusing land exchange in ZZTJ; counterpart 王 in S076 resolved to Qin_Shi_Huang.
+King_Fuchu_of_Chu,楚王負芻,King Fuchu of Chu,person,Chu,Ruler of Chu/Jing in Shiji 73 and ZZTJ; bare 荊王 in Shiji 06 S053 resolved to him (captured before Lord Changping's elevation).
 King_You_of_Chu,楚幽王,King You of Chu,person,Chu,King of Chu in ZZTJ (228 BCE)
 King_Ai_of_Chu,楚哀王郝,King Ai of Chu (Hao),person,Chu,Brother of King You of Chu in ZZTJ (228 BCE)
 Lord_Changping,昌平君,Lord Changping,person,Chu,"Exiled to Ying, then elevated as King of Chu by Xiang Yan (Shiji 06)"
@@ -61,8 +61,8 @@ Xiang_Yan,項燕,Xiang Yan,person,Chu,"Chu general resisting Qin in Shiji 06, Sh
 King_Jian_of_Qi,齊王建,King Jian of Qi,person,Qi,King of Qi in ZZTJ and Shiji 06
 Queen_Dowager_Junwang,齊君王后,Queen Dowager Junwang of Qi,person,Qi,Queen dowager of Qi in ZZTJ
 Hou_Sheng,后勝,Hou Sheng,person,Qi,Chancellor of Qi in Shiji 06 and ZZTJ
-Yongmen_Sima,雍門司馬,Marshal of Yongmen,person,Qi,Qi official advising King Jian in ZZTJ
-Jimo_Dafu,即墨大夫,Magistrate of Jimo,person,Qi,Qi official advising King Jian in ZZTJ
+Yongmen_Sima,雍門司馬,Marshal of Yongmen,person,Qi,Qi official advising King Jian in ZZTJ; 王 in S093 resolved to King_Jian_of_Qi by context.
+Jimo_Dafu,即墨大夫,Magistrate of Jimo,person,Qi,Qi official advising King Jian in ZZTJ; 王 in S094 resolved to King_Jian_of_Qi by context.
 Lord_Yuan_of_Wey,衞元君,Lord Yuan of Wey,person,Neutral,Ruler of Wey in Shiji 86
 Gai_Nie,蓋聶,Gai Nie,person,Neutral,Swordsman in Shiji 86
 Lu_Jujian,魯句踐,Lu Jujian,person,Neutral,Figure in Handan and post-assassination remark in Shiji 86
