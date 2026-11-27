@@ -1,0 +1,444 @@
+{
+  "_description": "Alias dictionary for the DHG502 Yan-Qin SNA corpus. Keys are canonical node_ids; values list the regex surface-form patterns (as they appear in the corpus) that resolve to that node. Context-dependent terms are NOT merged silently - see flagged_ambiguous_terms.",
+  "_note_on_regex": "Aliases are stored as Python regex fragments because many surface forms are short (e.g. 丹, 嘉, 光) and only disambiguated by lookaround context. Use re.search on segment text.",
+  "aliases": {
+    "Jing_Ke": [
+      "荊軻",
+      "荊卿",
+      "慶卿",
+      "軻(?=曰|既|遂|知|嘗|者|奉|和|逐|被|自知|廢|怒)"
+    ],
+    "Yan_Dan": [
+      "燕太子丹",
+      "太子丹",
+      "(?<![燕單])太子(?!軍)",
+      "(?<![燕單])丹(?=[曰者乃匿])",
+      "燕丹"
+    ],
+    "Yan_Wang_Xi": [
+      "燕王喜",
+      "今王喜",
+      "燕王(?!喜|及太子)"
+    ],
+    "Ju_Wu": [
+      "鞠武",
+      "鞫武",
+      "(?<=太傅)武(?=對曰|諫曰|曰)",
+      "(?<=其傅)鞠武"
+    ],
+    "Tian_Guang": [
+      "田光",
+      "田先生",
+      "處士田光",
+      "(?<![田臣])光(?=竊|曰|坐定|俛|僂|聞)"
+    ],
+    "Fan_Yuqi": [
+      "樊於期",
+      "樊將軍",
+      "(?<=將軍)於期",
+      "於期(?=仰天|乃前|太息|毎)"
+    ],
+    "Gao_Jianli": [
+      "髙漸離",
+      "高漸離"
+    ],
+    "Qin_Wuyang": [
+      "秦舞陽",
+      "秦武陽",
+      "(?<=秦)舞陽",
+      "(?<=秦)武陽"
+    ],
+    "Gai_Nie": [
+      "蓋聶"
+    ],
+    "Lu_Goujian": [
+      "魯句踐"
+    ],
+    "Gou_Tu": [
+      "狗屠"
+    ],
+    "Xu_Furen": [
+      "徐夫人"
+    ],
+    "Qin_Shi_Huang": [
+      "秦王政",
+      "秦始皇",
+      "始皇帝",
+      "秦皇帝",
+      "始皇(?!母)",
+      "秦王(?!朝|使趙|以為然)",
+      "大王",
+      "(?<![燕齊魏楚趙代先文武景湣幽繆悼孝威宣昭莊襄])王(?=曰|大喜|聞之|問|如邯鄲|使人|初并|義而許|負劍|以為然|收而與|何以去|必厚割|遂降|下其議)",
+      "皇帝",
+      "秦皇帝"
+    ],
+    "Wang_Jian": [
+      "王翦",
+      "(?<=王)翦(?=將|曰|果|謝|遂|既|行|至|日|因|使人|言)"
+    ],
+    "Wang_Ben": [
+      "王賁",
+      "(?<=翦子王)賁"
+    ],
+    "Li_Xin": [
+      "李信"
+    ],
+    "Meng_Tian": [
+      "蒙恬"
+    ],
+    "Meng_Wu": [
+      "蒙武",
+      "蒙〔武〕\\(恬\\)"
+    ],
+    "Meng_Jia": [
+      "蒙嘉",
+      "(?<=蒙)嘉(?=為先言|爲先言)"
+    ],
+    "Xia_Wuqie": [
+      "夏無且",
+      "(?<=賜)無且"
+    ],
+    "Qin_Zhao_Wang": [
+      "秦昭王"
+    ],
+    "Zhuang_Xiang_Wang": [
+      "莊襄王"
+    ],
+    "Wei_Yuan_Jun": [
+      "衞元君"
+    ],
+    "Li_Si": [
+      "廷尉斯"
+    ],
+    "Wang_Wan": [
+      "〔王〕綰"
+    ],
+    "Zhao_Xiaocheng_Wang": [
+      "趙孝成王",
+      "(?<=爲)趙王(?=酒)",
+      "(?<=今)王喜(?=四年)"
+    ],
+    "Zhao_Wang_Qian": [
+      "趙王遷",
+      "(?<=虜)趙王(?=，|遷)",
+      "(?<=得)趙王(?=。|$)"
+    ],
+    "Zhao_Daoxiang_Wang": [
+      "趙悼襄王",
+      "悼襄王"
+    ],
+    "Zhao_Youmiao_Wang": [
+      "幽繆王"
+    ],
+    "Dai_Wang_Jia": [
+      "代王嘉",
+      "趙公子嘉",
+      "公子嘉",
+      "(?<=代王)嘉(?=計|乃|遺)"
+    ],
+    "Lian_Po": [
+      "廉頗"
+    ],
+    "Le_Jian": [
+      "樂間",
+      "樂閒",
+      "(?<=昌國君樂)間",
+      "(?<=昌國君樂)閒"
+    ],
+    "Le_Cheng": [
+      "樂乘",
+      "［樂乘］"
+    ],
+    "Li_Fu": [
+      "栗腹"
+    ],
+    "Jiang_Qu": [
+      "將渠"
+    ],
+    "Ju_Xin": [
+      "劇辛",
+      "(?<=問劇辛，)辛(?=曰)"
+    ],
+    "Pang_Nuan": [
+      "龐煖"
+    ],
+    "Li_Mu": [
+      "李牧"
+    ],
+    "Qin_Qing": [
+      "卿秦"
+    ],
+    "Qing_She": [
+      "慶舍"
+    ],
+    "Xin_Liang": [
+      "信梁"
+    ],
+    "Zheng_Anping": [
+      "鄭安平"
+    ],
+    "Yanling_Jun": [
+      "延陵鈞"
+    ],
+    "Xie_Jun": [
+      "泄鈞"
+    ],
+    "Chunping_Jun": [
+      "春平君"
+    ],
+    "Ping_Du": [
+      "留平都",
+      "贖平都"
+    ],
+    "Chang'an_Jun": [
+      "長安君"
+    ],
+    "Zhao_Sheng": [
+      "平原君",
+      "趙勝"
+    ],
+    "Fu_Di": [
+      "傅抵"
+    ],
+    "Tufu_Qi": [
+      "徒父祺"
+    ],
+    "Wenxin_Hou": [
+      "文信侯"
+    ],
+    "Qi_Wang_Jian": [
+      "齊王建",
+      "(?<=戒)王建",
+      "(?<=怨)王建",
+      "(?<!孝成悼襄幽繆昭莊)齊王(?!建)"
+    ],
+    "Jun_Wang_Hou": [
+      "君王后"
+    ],
+    "Hou_Sheng": [
+      "后勝"
+    ],
+    "Yongmen_Sima": [
+      "雍門司馬"
+    ],
+    "Jimo_Dafu": [
+      "即墨大夫"
+    ],
+    "Chu_You_Wang": [
+      "楚幽王"
+    ],
+    "Chu_King_Hao": [
+      "(?<=立其弟)郝",
+      "(?<=三月，)郝(?=庶兄)"
+    ],
+    "Chu_King_Fuchu": [
+      "負芻"
+    ],
+    "Xiang_Yan": [
+      "項燕"
+    ],
+    "Changping_Jun": [
+      "昌平君"
+    ],
+    "Wei_Jingmin_Wang": [
+      "魏景湣王"
+    ],
+    "Wei_Wang_Jia": [
+      "魏王假",
+      "(?<=薨，子)假(?=立)"
+    ],
+    "Anling_Jun": [
+      "安陵君"
+    ],
+    "Cao_Mo": [
+      "曹沫"
+    ],
+    "Qi_Huan_Gong": [
+      "齊桓公"
+    ],
+    "Guan_Zhong": [
+      "(?<=雖有)管(?=、晏)"
+    ],
+    "Yan_Ying": [
+      "(?<=管、)晏(?=，)"
+    ],
+    "Liuxia_Hui": [
+      "柳下惠"
+    ],
+    "Yin_Zhou": [
+      "殷紂"
+    ],
+    "Shang_Rong": [
+      "商容"
+    ],
+    "Ji_Zuo": [
+      "箕左"
+    ],
+    "Zhao_Gong": [
+      "召公"
+    ],
+    "Bai_Gong_Sheng": [
+      "白公勝"
+    ],
+    "Yao_Li": [
+      "要離"
+    ],
+    "Nie_Zheng": [
+      "聶政"
+    ],
+    "Yang_Zi": [
+      "揚子"
+    ],
+    "Qi_Wei_Wang": [
+      "(?<=初，齊)威(?=、宣)"
+    ],
+    "Qi_Xuan_Wang": [
+      "(?<=齊威、)宣(?=之時)"
+    ],
+    "Zou_Yan": [
+      "鄒衍"
+    ],
+    "Zhou_Wen_Wang": [
+      "(?<=「)周文(?=、武)"
+    ],
+    "Zhou_Wu_Wang": [
+      "(?<=周文、)武(?=所封)"
+    ],
+    "Yan": [
+      "燕(?!王喜|太子丹|丹|王及|王亡|王使|王聞|王竊|王誠|王拜|王乃|王怒|王不聽|王大怒|王命|王召|王以|王必|王蹵|王將|王卒|王人|王喜)"
+    ],
+    "Qin": [
+      "秦(?!王政|始皇|始皇帝|皇帝|昭王|莊襄王|王翦|王賁|舞陽|武陽|將|兵|軍|法|地|人|國|王寵臣|王必|王聞|王大喜|王謂|王發|王驚|王環|王復|王方|王還|王遂|王負劍)"
+    ],
+    "Zhao": [
+      "趙(?!王遷|孝成王|悼襄王|幽繆王|公子嘉|王酒|王甚愛|將|使|人|氏|民|軍|兵|地|國|廥|與燕|聽|不能支|不能支秦)"
+    ],
+    "Dai": [
+      "代王",
+      "奔代",
+      "之代",
+      "攻代",
+      "虜代王",
+      "代師",
+      "於代",
+      "代郡"
+    ],
+    "Qi": [
+      "齊(?!王建|王將|王遂|王不聽|王還|王取筆|王曰|威、宣|威可立|人|地|亦東|軍|兵|師|之鋭)"
+    ],
+    "Chu": [
+      "楚",
+      "荊(?!軻|卿)"
+    ],
+    "Han": [
+      "韓(?!皋)"
+    ],
+    "Wei": [
+      "魏(?!景湣王|王假|王降|王請降|與趙|之先王)"
+    ],
+    "Wey": [
+      "衞",
+      "衛"
+    ],
+    "Zhou": [
+      "東（西）周",
+      "西周",
+      "周(?=得火德|代周|天子|文、武|滅東)"
+    ],
+    "Xiongnu": [
+      "匈奴",
+      "單于",
+      "單於"
+    ],
+    "Baiyue": [
+      "百越",
+      "越君"
+    ],
+    "Sanguo": [
+      "三晉"
+    ],
+    "Zhuhou": [
+      "諸侯"
+    ],
+    "Liuguo": [
+      "六國"
+    ],
+    "Wuguo": [
+      "五國"
+    ],
+    "Hainei": [
+      "海內",
+      "海内"
+    ],
+    "Tianxia": [
+      "天下"
+    ]
+  },
+  "flagged_ambiguous_terms": [
+    {
+      "term": "臣光曰",
+      "reason": "「臣光曰」 opens Sima Guang's historiographical comments in the ZZTJ segments (S045, S052). The 光 here is the historian Sima Guang, NOT 田光; the lookaround in Tian_Guang's alias excludes it. If you want Sima Guang as an authorial node, add it explicitly.",
+      "occurrences": "S045,S052"
+    },
+    {
+      "term": "王",
+      "reason": "Bare 「王」 is context-dependent: in ZZTJ/Shiji annalistic passages it usually = 秦王政 (S028, S035, S037, S039, S041, S052), in 燕策三/燕召公世家 = 燕王喜 (S017, S021, S085), in 趙世家 = the reigning Zhao king (S085, S090), in 齊 passages = 齊王建 (S049, S050, S051). Mapped per-segment by context; verify each occurrence.",
+      "occurrences": "S005,S006,S010,S011,S012,S014,S017,S018,S019,S021,S022,S023,S024,S025,S026,S028,S033,S035,S036,S037,S039,S041,S044,S048,S049,S050,S051,S052,S054,S058,S059,S060,S062,S063,S066,S080,S081,S085,S088,S090,S092"
+    },
+    {
+      "term": "太子",
+      "reason": "Bare 「太子」 almost always = 燕太子丹, but S084 「太子死」 refers to the Zhao crown prince (趙孝成王太子) in the 趙世家 annals; verify before merging.",
+      "occurrences": "S084 (and all P2/P3 Yan-narrative segments)"
+    },
+    {
+      "term": "使者",
+      "reason": "「使者」 is a role, not a named individual: the Yan envoy to Qin (S065-S066, also the Jing Ke embassy S010-S011/S080), the Yan envoy to Zhao (S018), and Yan envoys in S021/S036. Referent changes across passages; kept unmerged.",
+      "occurrences": "S010,S011,S018,S021,S036,S065,S066,S080"
+    },
+    {
+      "term": "趙王",
+      "reason": "Bare 「趙王」: S021/S085 「爲趙王酒」 = 趙孝成王; S006/S023/S058/S076 「虜趙王」 = 趙王遷; S065/S090 = reigning Zhao king in the envoy/春平君 episodes (孝成王 or 悼襄王, text does not specify). Verify S065 and S090.",
+      "occurrences": "S006,S021,S023,S058,S065,S076,S085,S090"
+    },
+    {
+      "term": "蒙〔武〕(恬)",
+      "reason": "Editorial collation: text reads 蒙武, emendation suggests 蒙恬 (S037, S040). Mapped to Meng_Wu (text as written); verify whether the underlying event refers to 蒙恬.",
+      "occurrences": "S037,S040"
+    },
+    {
+      "term": "齊威、宣",
+      "reason": "S053 「齊威、宣之時」 read as 齊威王、齊宣王 (allusion); but S050 「齊威可立」 uses 齊威 as an abstract noun ('Qi's prestige'), not the king. Verify S053 reading.",
+      "occurrences": "S050,S053"
+    },
+    {
+      "term": "箕左",
+      "reason": "S018 「商容、箕左之累」: the received ZGC text has 箕子 (Jizi); this copy writes 箕左. Kept verbatim as its own allusion node; verify against your edition.",
+      "occurrences": "S018"
+    },
+    {
+      "term": "狗屠",
+      "reason": "「狗屠」 is an unnamed occupation (the dog-butcher of the Yan market, companion of 荊軻 and 髙漸離). Treated as a generic person node; drop it if you only want named individuals.",
+      "occurrences": "S071"
+    },
+    {
+      "term": "尉文",
+      "reason": "S085 「以尉文封相國廉頗爲信平君」: 尉文 is usually read as a place name (the fief), not a person. Excluded from the node table; verify if you want it as a locality node.",
+      "occurrences": "S085"
+    },
+    {
+      "term": "太后",
+      "reason": "S029 「太后薨」 (ZZTJ 始皇帝十九年) and S058 「始皇帝母太后崩」 refer to the Qin king's mother, unnamed in the text. Excluded as an unnamed person; verify if you want a node.",
+      "occurrences": "S029,S058"
+    },
+    {
+      "term": "先王",
+      "reason": "「先王」 = deceased predecessor king; referent varies (Yan's 先王 in S010/S018/S019, Zhou's 先王 in S052, Wei's 先王 in S039). Left unmerged.",
+      "occurrences": "S010,S018,S019,S039,S052"
+    },
+    {
+      "term": "單于/單於",
+      "reason": "The Xiongnu chanyu is invoked only as the object of the proposed alliance (S002, S073); no personal name is given. Represented by the state node Xiongnu; verify if you want a separate person node.",
+      "occurrences": "S002,S073"
+    }
+  ]
+}
