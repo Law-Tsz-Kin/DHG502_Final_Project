@@ -8,7 +8,7 @@ Han,韓國,Han (State),state,Han,Polity of Han
 Chu,楚國,Chu (State),state,Chu,Polity of Chu/Jing
 Qi,齊國,Qi (State),state,Qi,Polity of Qi
 Xiongnu,匈奴,Xiongnu,state,Xiongnu,Northern polity/Chanyu mentioned in alliance/exile proposals
-King_Xi_of_Yan,燕王喜,King Xi of Yan,person,Yan,King of Yan in ZGC, Shiji 34, Shiji 43, and ZZTJ
+King_Xi_of_Yan,燕王喜,King Xi of Yan,person,Yan,"King of Yan in ZGC, Shiji 34, Shiji 43, and ZZTJ"
 Crown_Prince_Dan,太子丹,Crown Prince Dan,person,Yan,Crown Prince of Yan; hostage in Qin; orchestrator of assassination plot
 Ju_Wu,鞠武,Ju Wu (Taifu),person,Yan,Grand Tutor (Taifu) of Yan; appears as 鞫武 in ZGC and 鞠武 in Shiji 86 / ZZTJ
 Tian_Guang,田光,Tian Guang,person,Yan,Recluse in Yan who recommended Jing Ke and died by suicide
@@ -21,14 +21,14 @@ Qing_Qin,慶秦,Qing Qin,person,Yan,Yan commander attacking Dai; appears as 慶�
 Yue_Jian,樂間,Yue Jian,person,Yan,Lord of Changguo; appears as 樂間 in ZGC and 樂閒 in Shiji 34 / Shiji 43
 Jiang_Qu,將渠,Jiang Qu,person,Yan,Yan minister/chancellor who opposed attacking Zhao and negotiated peace
 Ju_Xin,劇辛,Ju Xin,person,Yan,Commander serving Yan who attacked Zhao and was killed by Pang Nuan
-Qin_Shi_Huang,秦王政,King Zheng of Qin (Qin Shi Huang),person,Qin,King of Qin / First Emperor across ZGC, Shiji, and ZZTJ
-Wang_Jian,王翦,Wang Jian,person,Qin,Qin general campaigning against Zhao, Yan, and Chu
+Qin_Shi_Huang,秦王政,King Zheng of Qin (Qin Shi Huang),person,Qin,"King of Qin / First Emperor across ZGC, Shiji, and ZZTJ"
+Wang_Jian,王翦,Wang Jian,person,Qin,"Qin general campaigning against Zhao, Yan, and Chu"
 Li_Xin,李信,Li Xin,person,Qin,Qin general pursuing Crown Prince Dan and campaigning against Chu
-Wang_Ben,王賁,Wang Ben,person,Qin,Qin general campaigning against Wei, Yan (Liaodong), Dai, and Qi
+Wang_Ben,王賁,Wang Ben,person,Qin,"Qin general campaigning against Wei, Yan (Liaodong), Dai, and Qi"
 Meng_Jia,蒙嘉,Meng Jia,person,Qin,Qin courtier/zhongshuzi bribed by Jing Ke
 Xia_Wuqu,夏無且,Xia Wuqu,person,Qin,Qin court physician who struck Jing Ke with medicine bag
 Xin_Sheng,辛勝,Xin Sheng,person,Qin,Qin general attacking Yan alongside Wang Jian in Shiji 06
-Meng_Wu,蒙武,Meng Wu,person,Qin,Qin general campaigning against Chu in Shiji 06, Shiji 73, and ZZTJ
+Meng_Wu,蒙武,Meng Wu,person,Qin,"Qin general campaigning against Chu in Shiji 06, Shiji 73, and ZZTJ"
 Meng_Tian,蒙恬,Meng Tian,person,Qin,Qin general campaigning against Chu with Li Xin in Shiji 73 and ZZTJ
 Lu_Buwei,文信侯,Marquis Wenxin (Lu Buwei),person,Qin,Qin minister in Shiji 43 dialogue regarding Lord Chunping
 Wang_Wan,王綰,Wang Wan,person,Qin,Qin chancellor proposing enfeoffment in ZZTJ (221 BCE)
@@ -39,8 +39,8 @@ King_Xiaocheng_of_Zhao,趙孝成王,King Xiaocheng of Zhao,person,Zhao,King of Z
 King_Daoxiang_of_Zhao,趙悼襄王,King Daoxiang of Zhao,person,Zhao,King of Zhao in Shiji 34 and Shiji 43
 King_Qian_of_Zhao,趙王遷,King Qian of Zhao,person,Zhao,King of Zhao captured by Qin in Shiji 34 and ZZTJ
 Dai_King_Jia,代王嘉,King Jia of Dai (Prince Jia of Zhao),person,Dai,Appears as 趙公子嘉 in Shiji 34/06/ZZTJ and 代王嘉 in ZGC/Shiji 86/Shiji 34/ZZTJ
-Lian_Po,廉頗,Lian Po,person,Zhao,Zhao general/minister (also 信平君) in ZGC, Shiji 34, and Shiji 43
-Yue_Cheng,樂乘,Yue Cheng,person,Zhao,Zhao general (also 武襄君) in ZGC, Shiji 34, and Shiji 43
+Lian_Po,廉頗,Lian Po,person,Zhao,"Zhao general/minister (also 信平君) in ZGC, Shiji 34, and Shiji 43"
+Yue_Cheng,樂乘,Yue Cheng,person,Zhao,"Zhao general (also 武襄君) in ZGC, Shiji 34, and Shiji 43"
 Li_Mu,李牧,Li Mu,person,Zhao,Zhao general attacking Yan in Shiji 34 and Shiji 43
 Pang_Nuan,龐煖,Pang Nuan,person,Zhao,Zhao general defeating Ju Xin in Shiji 34 and Shiji 43
 Lord_Chunping,春平君,Lord Chunping,person,Zhao,Zhao figure detained by Qin in Shiji 43
@@ -57,8 +57,8 @@ King_Fuchu_of_Chu,楚王負芻,King Fuchu of Chu,person,Chu,Ruler of Chu/Jing in
 King_You_of_Chu,楚幽王,King You of Chu,person,Chu,King of Chu in ZZTJ (228 BCE)
 King_Ai_of_Chu,楚哀王郝,King Ai of Chu (Hao),person,Chu,Brother of King You of Chu in ZZTJ (228 BCE)
 Lord_Changping,昌平君,Lord Changping,person,Chu,Figure elevated as King of Chu in Shiji 06 and ZZTJ
-Xiang_Yan,項燕,Xiang Yan,person,Chu,Chu general resisting Qin in Shiji 06, Shiji 73, and ZZTJ
-King_Jian_of_Qi,齊王建,King Jian of Qi,person,Qi,King of Qi in Shiji 06 and ZZTJ
+Xiang_Yan,項燕,項燕,person,Chu,"Chu general resisting Qin in Shiji 06, Shiji 73, and ZZTJ"
+King_Jian_of_Qi,齊王建,King Jian of Qi,person,Qi,King of Qi in ZZTJ and Shiji 06
 Queen_Dowager_Junwang,齊君王后,Queen Dowager Junwang of Qi,person,Qi,Queen dowager of Qi in ZZTJ
 Hou_Sheng,后勝,Hou Sheng,person,Qi,Chancellor of Qi in Shiji 06 and ZZTJ
 Yongmen_Sima,雍門司馬,Marshal of Yongmen,person,Qi,Qi official advising King Jian in ZZTJ
