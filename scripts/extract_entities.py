@@ -102,8 +102,8 @@ add("Meng_Jia", "蒙嘉", "person", "Qin", "court_favourite",
     [r"蒙嘉", r"(?<=蒙)嘉(?=為先言|爲先言)"])
 add("Xia_Wuqie", "夏無且", "person", "Qin", "court_physician",
     [r"夏無且", r"(?<=賜)無且"])
-add("Qin_Zhao_Wang", "秦昭王", "person", "Qin", "ruler",
-    [r"秦昭王"])
+# Qin_Zhao_Wang removed: appears only as 「秦昭王卒」 (S021) - a death notice
+# with no edge-type event; no edges could be built.
 add("Zhuang_Xiang_Wang", "莊襄王", "person", "Qin", "ruler",
     [r"莊襄王"])
 add("Wei_Yuan_Jun", "衞元君", "person", "Other", "ruler",
@@ -120,8 +120,8 @@ add("Zhao_Wang_Qian", "趙王遷", "person", "Zhao_Dai", "ruler",
     [r"趙王遷", r"(?<=虜)趙王(?=，|遷)", r"(?<=得)趙王(?=。|$)"])
 add("Zhao_Daoxiang_Wang", "趙悼襄王", "person", "Zhao_Dai", "ruler",
     [r"趙悼襄王", r"悼襄王"])
-add("Zhao_Youmiao_Wang", "趙幽繆王", "person", "Zhao_Dai", "ruler",
-    [r"幽繆王"])
+# Zhao_Youmiao_Wang removed: appears only as 「悼襄王卒，子幽繆王遷立」 (S092)
+# - a succession notice with no edge-type event.
 add("Dai_Wang_Jia", "代王嘉", "person", "Zhao_Dai", "ruler",
     [r"代王嘉", r"趙公子嘉", r"公子嘉", r"(?<=代王)嘉(?=計|乃|遺)"])
 add("Lian_Po", "廉頗", "person", "Zhao_Dai", "general",
@@ -146,8 +146,14 @@ add("Qing_She", "慶舍", "person", "Zhao_Dai", "general",
     [r"慶舍"])
 add("Xin_Liang", "信梁", "person", "Qin", "general",
     [r"信梁"])
-add("Zheng_Anping", "鄭安平", "person", "Other", "general",
-    [r"鄭安平"])
+# Zheng_Anping removed: appears only as 「武陽君鄭安平死」 (S084) - death notice.
+# Chang'an_Jun removed: appears only as 「封長安君以饒」 (S091) - enfeoffment,
+# not one of the six edge types.
+# Zhao_Sheng removed: appears only as 「平原君趙勝死」 (S084) - death notice.
+# Fu_Di removed: appears only as 「傅抵將，居平邑」 (S091) - deployment, no
+# edge-type event.
+# Tufu_Qi removed: appears only as 「徒父祺出」 (S084) - event too unclear to
+# classify.
 add("Yanling_Jun", "延陵鈞", "person", "Zhao_Dai", "general",
     [r"延陵鈞"])
 add("Xie_Jun", "泄鈞", "person", "Zhao_Dai", "envoy_intermediary",
@@ -156,14 +162,6 @@ add("Chunping_Jun", "春平君", "person", "Zhao_Dai", "royal_favourite",
     [r"春平君"])
 add("Ping_Du", "平都", "person", "Zhao_Dai", "hostage_figure",
     [r"留平都", r"贖平都"])
-add("Chang'an_Jun", "長安君", "person", "Zhao_Dai", "royal_kinsman",
-    [r"長安君"])
-add("Zhao_Sheng", "趙勝（平原君）", "person", "Zhao_Dai", "chancellor",
-    [r"平原君", r"趙勝"])
-add("Fu_Di", "傅抵", "person", "Zhao_Dai", "general",
-    [r"傅抵"])
-add("Tufu_Qi", "徒父祺", "person", "Zhao_Dai", "general",
-    [r"徒父祺"])
 add("Wenxin_Hou", "文信侯（呂不韋）", "person", "Qin", "chancellor",
     [r"文信侯"])
 
@@ -178,8 +176,7 @@ add("Yongmen_Sima", "雍門司馬", "person", "Qi", "palace_commander",
     [r"雍門司馬"])
 add("Jimo_Dafu", "即墨大夫", "person", "Qi", "grand_master",
     [r"即墨大夫"])
-add("Chu_You_Wang", "楚幽王", "person", "Chu", "ruler",
-    [r"楚幽王"])
+# Chu_You_Wang removed: appears only as 「楚幽王薨」 (S031) - death notice.
 add("Chu_King_Hao", "郝", "person", "Chu", "ruler",
     [r"(?<=立其弟)郝", r"(?<=三月，)郝(?=庶兄)"])
 add("Chu_King_Fuchu", "負芻", "person", "Chu", "ruler",
@@ -188,8 +185,8 @@ add("Xiang_Yan", "項燕", "person", "Chu", "general",
     [r"項燕"])
 add("Changping_Jun", "昌平君", "person", "Chu", "ruler",
     [r"昌平君"])
-add("Wei_Jingmin_Wang", "魏景湣王", "person", "Wei", "ruler",
-    [r"魏景湣王"])
+# Wei_Jingmin_Wang removed: appears only as 「魏景湣王薨，子假立」 (S032) -
+# succession notice; the meaningful edge (魏王假's fall) is on Wei_Wang_Jia.
 add("Wei_Wang_Jia", "魏王假", "person", "Wei", "ruler",
     [r"魏王假", r"(?<=薨，子)假(?=立)"])
 add("Anling_Jun", "安陵君", "person", "Wei", "vassal_lord",
@@ -273,8 +270,8 @@ add("Liuguo", "六國", "state", "Other", "state_collective",
     [r"六國"])
 add("Wuguo", "五國", "state", "Other", "state_collective",
     [r"五國"])
-add("Hainei", "海內", "state", "Other", "realm_collective",
-    [r"海內", r"海内"])
+# Hainei removed: 「海內」 appears only inside rhetorical phrases (臣海內之王者,
+# 海內賴陛下神靈一統) with no edge-type event; Tianxia covers the realm node.
 add("Tianxia", "天下", "state", "Other", "realm_collective",
     [r"天下"])
 

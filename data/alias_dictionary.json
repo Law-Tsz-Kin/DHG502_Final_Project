@@ -98,9 +98,6 @@
       "夏無且",
       "(?<=賜)無且"
     ],
-    "Qin_Zhao_Wang": [
-      "秦昭王"
-    ],
     "Zhuang_Xiang_Wang": [
       "莊襄王"
     ],
@@ -126,9 +123,6 @@
     "Zhao_Daoxiang_Wang": [
       "趙悼襄王",
       "悼襄王"
-    ],
-    "Zhao_Youmiao_Wang": [
-      "幽繆王"
     ],
     "Dai_Wang_Jia": [
       "代王嘉",
@@ -174,9 +168,6 @@
     "Xin_Liang": [
       "信梁"
     ],
-    "Zheng_Anping": [
-      "鄭安平"
-    ],
     "Yanling_Jun": [
       "延陵鈞"
     ],
@@ -189,19 +180,6 @@
     "Ping_Du": [
       "留平都",
       "贖平都"
-    ],
-    "Chang'an_Jun": [
-      "長安君"
-    ],
-    "Zhao_Sheng": [
-      "平原君",
-      "趙勝"
-    ],
-    "Fu_Di": [
-      "傅抵"
-    ],
-    "Tufu_Qi": [
-      "徒父祺"
     ],
     "Wenxin_Hou": [
       "文信侯"
@@ -224,9 +202,6 @@
     "Jimo_Dafu": [
       "即墨大夫"
     ],
-    "Chu_You_Wang": [
-      "楚幽王"
-    ],
     "Chu_King_Hao": [
       "(?<=立其弟)郝",
       "(?<=三月，)郝(?=庶兄)"
@@ -239,9 +214,6 @@
     ],
     "Changping_Jun": [
       "昌平君"
-    ],
-    "Wei_Jingmin_Wang": [
-      "魏景湣王"
     ],
     "Wei_Wang_Jia": [
       "魏王假",
@@ -365,10 +337,6 @@
     ],
     "Wuguo": [
       "五國"
-    ],
-    "Hainei": [
-      "海內",
-      "海内"
     ],
     "Tianxia": [
       "天下"
