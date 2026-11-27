@@ -32,6 +32,12 @@ Phase assignment criterion (documented for the audit):
   originally marked [VERIFY_PHASE]; the user has since resolved them manually
   (S001 → P2, S014 → P3, S058 → P3), and the PHASES table below reflects those
   decisions so re-running the script reproduces the committed CSV exactly.
+
+Renumbering (v3):
+  The user manually split the two straddling blocks into two segments each at
+  the sentence boundary below, then renumbered all rows sequentially. The
+  SPLITS table reproduces those splits so the script output matches the
+  committed CSV (92 rows, S001–S092).
 """
 
 import csv
@@ -123,6 +129,25 @@ PHASES = {
         [P1] * 9,
 }
 
+# Manual splits (user decision): straddling blocks are cut at the sentence
+# boundary below into two segments, each with its own phase. The split point
+# is the start of the given sentence; text before it keeps the first phase,
+# text from it onward takes the second phase. No characters are added or lost.
+SPLITS = {
+    # 燕召公世家 25-33年 block[1]: split before 「二十九年」
+    #   part 1 (P3): 燕見秦且滅六國 … 使將軍王翦撃燕。
+    #   part 2 (P4): 二十九年，秦攻拔我薊 … 三十年，秦滅魏。
+    "燕王喜二十五年至三十三年_燕召公世家_史記.txt": [
+        (1, "二十九年，秦攻拔我薊", P3, P4),
+    ],
+    # 秦始皇本紀 block[1]: split before 「二十一年」
+    #   part 1 (P3): 二十年，燕太子丹患秦兵至國 … 秦軍破燕易水之西。
+    #   part 2 (P4): 二十一年，王賁攻（薊）［荊］ … 大雨雪，深二尺五寸。
+    "秦始皇十八年至二十六年_秦始皇本紀_史記.txt": [
+        (1, "二十一年，王賁攻", P3, P4),
+    ],
+}
+
 
 def source_of(name: str) -> str:
     if "戰國策" in name:
@@ -168,6 +193,25 @@ def clean_block(lines) -> str:
     return joined.strip()
 
 
+def apply_splits(fname: str, blocks, phases):
+    """Apply the user's manual splits: a block listed in SPLITS is cut at the
+    given sentence boundary into (text_before, phase_before) and
+    (text_from_boundary, phase_after)."""
+    rules = SPLITS.get(fname, [])
+    for block_idx, marker, phase_a, phase_b in rules:
+        text = clean_block(blocks[block_idx])
+        pos = text.find(marker)
+        if pos < 0:
+            raise SystemExit(f"{fname}: split marker not found in block {block_idx}: {marker}")
+        blocks = (
+            blocks[:block_idx]
+            + [text[:pos], text[pos:]]
+            + blocks[block_idx + 1:]
+        )
+        phases = phases[:block_idx] + [phase_a, phase_b] + phases[block_idx + 1:]
+    return blocks, phases
+
+
 def main() -> None:
     rows = []
     footnotes_removed = 0
@@ -182,12 +226,14 @@ def main() -> None:
                 f"{fname}: {len(blocks)} blocks but {len(phases)} phase tags — aborting."
             )
         src = source_of(fname)
-        for lines, phase in zip(blocks, phases):
-            joined = "".join(ln.strip() for ln in lines)
-            footnotes_removed += len(FOOTNOTE.findall(joined))
-            headings_removed += len(YEAR_HEADING.findall(joined))
-            itemnums_removed += len(ITEM_NUM.findall(joined))
-            rows.append((fname, src, phase, clean_block(lines)))
+        blocks, phases = apply_splits(fname, blocks, phases)
+        for block, phase in zip(blocks, phases):
+            # after apply_splits, split entries are pre-cleaned strings
+            text = clean_block(block) if isinstance(block, list) else block
+            footnotes_removed += len(FOOTNOTE.findall(text))
+            headings_removed += len(YEAR_HEADING.findall(text))
+            itemnums_removed += len(ITEM_NUM.findall(text))
+            rows.append((fname, src, phase, text))
 
     # sequential unique ids
     rows_out = []
@@ -205,22 +251,27 @@ def main() -> None:
         rdr = csv.reader(fh)
         header = next(rdr)
         data = list(rdr)
+    n_expected = len(rows_out)
     assert header == ["segment_id", "source", "phase", "text"], header
-    assert len(data) == len(rows_out) == 90, len(data)
+    assert len(data) == n_expected, (len(data), n_expected)
     ids = [r[0] for r in data]
-    assert ids == [f"S{i:03d}" for i in range(1, 91)], "ids not sequential/unique"
+    assert ids == [f"S{i:03d}" for i in range(1, n_expected + 1)], "ids not sequential/unique"
+    assert len(set(ids)) == len(ids), "duplicate ids"
     allowed_src = {"ZGC", "Shiji", "ZZTJ"}
     allowed_phase = {P1, P2, P3, P4, VERIFY}
     assert all(r[1] in allowed_src for r in data)
     assert all(r[2] in allowed_phase for r in data)
     assert all(r[3].strip() != "" for r in data)
     # verbatim check: every text must equal its cleaned source block
-    by_file = {f: blocks_of((RAW / f).read_text(encoding="utf-8")) for f in FILES}
+    # (blocks that were split are checked as the concatenation of their parts)
     idx = 0
     for f in FILES:
-        for b in by_file[f]:
-            assert data[idx][3] == clean_block(b), f"verbatim mismatch at {data[idx][0]}"
+        blocks, phases = apply_splits(f, blocks_of((RAW / f).read_text(encoding="utf-8")), PHASES[f])
+        for b in blocks:
+            expected = clean_block(b) if isinstance(b, list) else b
+            assert data[idx][3] == expected, f"verbatim mismatch at {data[idx][0]}"
             idx += 1
+    assert idx == n_expected
 
     # ---- audit summary ----
     from collections import Counter
